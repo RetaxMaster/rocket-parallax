@@ -5,67 +5,49 @@
 }
 
 .parallax-container {
-    position: relative;
+    width: 100%;
     height: 100vh;
+    perspective: 8px;
+    /* perspective-origin: 50%; */
     overflow-x: hidden;
     overflow-y: scroll;
-    perspective: 8px;
-}
-
-.image-background,
-.image {
-    max-width: 1400px;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-}
-
-.image-background img,
-.image img {
-    max-width: 100%;
-}
-
-.image-smoke {
-    transform: translateZ(-10px) scale(2.25);
-    -webkit-transform: translateZ(-10px) scale(2.25);
-    -moz-transform: translateZ(-10px) scale(2.25);
-    -ms-transform: translateZ(-10px) scale(2.25);
-    -o-transform: translateZ(-10px) scale(2.25);
-}
-
-.image-stars {
-    transform: translateZ(-1000px) scale(126);
-    -webkit-transform: translateZ(-1000px) scale(126);
-    -moz-transform: translateZ(-1000px) scale(126);
-    -ms-transform: translateZ(-1000px) scale(126);
-    -o-transform: translateZ(-1000px) scale(126);
+    position: relative;
 }
 
 .image {
     position: absolute;
     left: 0;
     right: 0;
+    margin: 0 auto;
+    text-align: center;
 }
 
-
-/* .image-background img,
-.image-smoke img,
-.image-stars img {
-    min-width: 1400px;
+.image-background {
+    height: auto;
     width: 100%;
-} */
-
-/* .image-smoke,
-
-
-.image-stars {
-    top: 80px;
+    transform: translateZ(0px) scale(1);
+    z-index: 1;
+    /* transform-origin: 0 50%; */
 }
 
 .image-smoke {
-    transform: translateZ(2px) scale(0.75);
-    -webkit-transform: translateZ(2px) scale(0.75);
-    -moz-transform: translateZ(2px) scale(0.75);
-    -ms-transform: translateZ(2px) scale(0.75);
-    -o-transform: translateZ(2px) scale(0.75);
-} */
+    height: 100%;
+    width: 100%;
+    transform: translateZ(5px) scale(0.375);
+    top: calc(3000px - 460px);
+    z-index: 2;
+}
+
+.image-stars {
+    height: 100%;
+    width: 100%;
+    transform: translateZ(-10px) scale(2.25);
+    transform-origin: 50%;
+    z-index: 2;
+}
+
+.image-rocket {
+    transform: translateZ(-150px) scale(19.75);
+    top: calc(3000px - 800px);
+    z-index: 3;
+}
